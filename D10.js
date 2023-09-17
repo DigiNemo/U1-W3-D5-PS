@@ -40,7 +40,7 @@ console.log(me);
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-let deleteLastElement = delete me.age;
+delete me.age;
 
 console.log(me);
 
@@ -48,36 +48,34 @@ console.log(me);
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
-const skills = [JS, Phyton]
+me.skills = ["JS","Phyton"]
 
-skills.push(me)
+console.log(me)
 
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
-Java.push.skills(me) 
+me.skills.push("Java") 
 
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
-for (let i = 0; i < me.length; i++) {
-  const newskills = skills.pop();
-  
-}
+me.skills.pop()
 
 // Funzioni
 
 /* ESERCIZIO 1
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
-let dice = function (n) {
-  Math.floor(Math.random() * 6 + 1);
-  return n;
+let dice = function () {
+  Math.floor(Math.random() * 6 + 1);;
 };
+
+dice()
 
 console.log(dice);
 
@@ -86,11 +84,12 @@ console.log(dice);
 */
 
 let whoIsBigger = function (n, m) {
-  if (n > m) return ("n is bigger");
-else(n < m); return ("m is bigger");
+  if (n > m) return (console.log("n is bigger"));
+if(n < m) return (console.log("m is bigger"));
   
 };
-console.log(whoIsBigger)
+whoIsBigger()
+
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -99,8 +98,10 @@ console.log(whoIsBigger)
 */
 
 let splitMe = function (str){
- const str=str.split
+ const str=str.split(" ")
 }
+
+splitMe()
 
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
@@ -110,26 +111,23 @@ let splitMe = function (str){
 const DeleteOne = function (str, booleano){
    if (booleano === true) {return str.slice(1,1)} else {return str.slice(-1)}}
 
+   DeleteOne()
+
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 const onlyLetters = function(str){
-const newStr = str.split("")
-for (let i = 0; i < newstr.length; i++) {
-    const newStr1 = newStr[i];
-    if str.split === (number) else 
-  }
-   
 }
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
 const isThisAnEmail = function (str){
-  if str.includes(@)console.log(true) else console.log(email is not valid)
+  if (str.includes("@")){ return (true)} else {console.log("email is not valid")}
 
+  isThisAnEmail()
 
 }
 /* ESERCIZIO 7
@@ -151,6 +149,7 @@ const whatDayIsIt = function (){
  return DayIndex
 
 }
+whatDayIsIt()
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -165,6 +164,8 @@ const whatDayIsIt = function (){
   }
 */
 
+
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
@@ -174,7 +175,7 @@ const DiffDate = function (date) {
   new Date - date
   
 }
-
+DiffDate()
 
 
 /* ESERCIZIO 10
@@ -182,9 +183,11 @@ const DiffDate = function (date) {
 */
 const myBirthday = "26 gennaio"
 
-const isTodayMyBirthday = (){
-  if (myBirthday === new Date()) {return "Today is my birthday"} else {"Is not my birthday"}
-  }
+const isTodayMyBirthday = () => {
+  if (myBirthday === new Date()) {return ("Today is my birthday")} }
+
+
+  isTodayMyBirthday()
 
 // Arrays & Oggetti
 
@@ -404,8 +407,8 @@ const movies = [
 
 const newestMovie = function (){
   for (let i = 0; i < movies.length; i++) {
-    const currentYear = parseInt(movies,Year);
-    if currentYear > 
+    const yearMovies = parseInt(movies[i].Year);
+    if (yearMovies) {}
     
   }
 
@@ -423,24 +426,28 @@ const countMovies = movies.lenght
   Scrivi una funzione chiamata "onlyTheYears" che crea un array con solamente gli anni di uscita dei film contenuti nell'array "movies" fornito.
 */
 
-const onlyTheYears = function() {
+const onlyTheYears = function(){
   for (let i = 0; i < movies.length; i++) {
-    const onlyTheYears = concat.movies[i];
+    const onlyTheYears=movies[i].Year.push(onlyTheYears);
     
   }
 }
+
+onlyTheYears()
+
 
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
-const onlyInLastMillennium = function (){
+const onlyInLastMillennium = function(){
   for (let i = 0; i < movies.length; i++) {
-    const currentYear = parseInt(movies,Year);
-    if currentYear < 2000
-    return currentYear
-
+    if (parseInt.movies[i].Year < 2000)
+    return movies[i];
+  }
 }
+
+onlyInLastMillennium()
 
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
@@ -448,22 +455,26 @@ const onlyInLastMillennium = function (){
 
 
 const sumAllTheYears = function (){
-  for (let i = 0; i < movies.length; i++)
-    const currentYear = reduce.parseInt(movies,Year);
-
+  for (let i = 0; i < movies.length; i++){
+    const sumAllTheYears = reduce.parseInt(movies[i],Year);
+    return sumAllTheYears
+  }
 }
+
+sumAllTheYears()
+
 
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
-const searchByTitle = function (str){
+const searchByTitle = function (Avengers){
   for (let i = 0; i < movies.length; i++)
-  const currentTitle = 
+  if (movies[i].Title.includes === Avengers) {movies[i].Title.includes} return movies[i].Title}
 
-
-}
+  searchByTitle()
+  
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
@@ -473,12 +484,14 @@ match =[]
 unmatch =[]
 
 
-const searchAndDivide = function (str){
+const searchAndDivide = function (Avengers){
   for (let i = 0; i < movies.length; i++)
-  if (Title.includes === "Avengers") Push.Title.includes[match] else (Title.includes !=== "Avengers") push.Title[unmatch]
-
+  if (movies[i].Title.includes === Avengers) {movies[i].Title.includes.push[match]} else {(movies[i].Title.includes !== Avengers), movies[i].Title.push[unmatch]
+}
 }
 
-/* ESERCIZIO 19
-  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
+searchAndDivide()
 
+/* ESERCIZIO 19
+  Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro
+/*
